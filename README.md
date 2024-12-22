@@ -41,3 +41,30 @@ dbaf35f2af1526e4d5a9e6b65b22e090d4db0e0355d8be8e5c2255fe03b65475  ek80_ext.zip
 7abf0635a7d1365d075d9b4ce32abef86efe2ea1fda84be4f07187f384709ff5  es60.zip
 e7d58335b0049b3709e08663913925d75a76250f787f84019dc5f3fadfc0983a  es70.zip
 9547583dbd6ac77375384e614cd559ff61639d36f082f1ce80855f9b57a52213  es80.zip
+
+
+## CICD
+Moving the 
+.ci_helpers/docker/setup-services.py
+file 
+
+# Replacing
+```
+{'cmd': None, 'msg': 'Starting test services deployment ...'}
+{'cmd': ['docker-compose', '-f', WindowsPath('C:/Users/rudy/Documents/github/echopype/.ci_helpers/docker/docker-compose.yaml'), 'pull'], 'msg': 'Pulling latest images ...'}
+{'cmd': ['docker-compose', '-f', WindowsPath('C:/Users/rudy/Documents/github/echopype/.ci_helpers/docker/docker-compose.yaml'), 'up', '-d', '--remove-orphans', '--force-recreate'], 'msg': 'Bringing up services ...'}
+{'cmd': ['docker', 'cp', '-L', 'docker-httpserver-1:/usr/local/apache2/htdocs/data', WindowsPath('C:/Users/rudy/Documents/github/echopype/.ci_helpers/docker/echopype/test_data')], 'msg': 'Copying new test folder from http service ...'}
+{'cmd': <function load_s3 at 0x0000020C590B3820>, 'msg': 'Setting up minio s3 bucket ...'}
+{'cmd': ['docker', 'ps', '--last', '2'], 'msg': 'Done.'}
+```
+
+# In testing.py
+> echopype/testing.py
+
+replace the 
+```
+HERE = Path(__file__).parent.absolute()
+TEST_DATA_FOLDER = HERE / "test_data"
+```
+with 
+
