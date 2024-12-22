@@ -6,28 +6,17 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/oftfrfbf/echopype-test-data)
 
-Echopype is a package built to enable interoperability and scalability in ocean sonar data processing. These data are widely used for obtaining information about the distribution and abundance of marine animals, such as fish and krill. Our ability to collect large volumes of sonar data from a variety of ocean platforms has grown significantly in the last decade. However, most of the new data remain under-utilized. echopype aims to address the root cause of this problem - the lack of interoperable data format and scalable analysis workflows that adapt well with increasing data volume - by providing open-source tools as entry points for scientists to make discovery using these new data.
+Testing saving the echopype cormorack/http:latest data from the docker images as tagged release assets.
 
-## Documentation
+The assets don't contribute to the projects code size and the limit is 2 GB for each assest.
 
-Learn more about echopype in the official documentation at https://echopype.readthedocs.io. Check out executable examples in the companion repository https://github.com/OSOceanAcoustics/echopype-examples.
+> conda install pooch
 
+# Zenodo DOI
+Goto my account, Github, flip the switch, 
+https://zenodo.org/account/settings/github/repository/oftfrfbf/echopype-test-data
 
-## Contributing
+[![DOI](https://zenodo.org/badge/906437365.svg)](https://doi.org/10.5281/zenodo.14542544)
 
-You can find information about how to contribute to echopype at our [Contributing Page](https://echopype.readthedocs.io/en/latest/contributing.html).
+Unfortunately this only archives the actual code in the repo, not the assets.
 
-<!-- ## <img src="docs/source/images/GSoC-logo-horizontal.svg" alt="Google Summer of Code logo" width="300" style="padding-right: 50px; vertical-align: middle">
-
-In collaboration with the [Integrated Ocean Observing System (IOOS)](https://ioos.noaa.gov/), the Echopype team aims to recruit talented [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/)
-participants to help us upgrade the robustness and scalability of the Echopype package.
-
-If you are a GSoC 2024 contributor, please head over to [GSoC contributor's guide](gsoc_contrib_guide.md) to get more information specific to the program. -->
-
-## License
-
-Echopype is licensed under the open source [Apache 2.0 license](https://opensource.org/licenses/Apache-2.0).
-
----------------
-
-Copyright (c) 2018-2024, Echopype Developers.
